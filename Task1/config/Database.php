@@ -4,7 +4,7 @@ class Database
     private $host = "localhost";
     private $username = 'root';
     private $password = '';
-    private  $db_name = 'ercmax_ventures';
+    private  $db_name = '';
     public $conn;
 
     function __construct()
@@ -18,10 +18,6 @@ class Database
         } catch (Exception $e) {
             die("DB Connection Failed" . $e->getMessage());
         }
-    }
-    public function query($sql)
-    {
-        return $this->conn->query($sql);
     }
     public function prepare($sql)
     {
